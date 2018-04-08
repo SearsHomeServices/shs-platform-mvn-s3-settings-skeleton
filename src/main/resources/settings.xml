@@ -5,6 +5,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <servers>
     <server>
+      <id>aws-release</id>
+      <username>${S3_ARTIFACTORY_SERVER_READ_USER_NAME}</username>
+      <password>${S3_ARTIFACTORY_SERVER_PASSWORD}</password>
+    </server>
+    <server>
       <username>${ARTIFACTORY_SERVER_READ_USER_NAME}</username>
       <password>${ARTIFACTORY_SERVER_PASSWORD}</password>
       <id>release</id>
@@ -18,6 +23,13 @@
   <profiles>
     <profile>
       <repositories>
+         <repository>
+                <id>aws-release</id>
+                <name>AWS S3 Release Repository</name>
+                <url>s3://stage-repository/lib</url>
+            </repository>
+        <repository>
+
         <repository>
           <id>release</id>
           <name>libs-release</name>
