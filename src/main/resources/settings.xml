@@ -27,8 +27,7 @@
                 <id>aws-release</id>
                 <name>AWS S3 Release Repository</name>
                 <url>s3://stage-repository/lib</url>
-            </repository>
-        <repository>
+         </repository>
 
         <repository>
           <id>release</id>
